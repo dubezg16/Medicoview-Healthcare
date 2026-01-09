@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicoview Healthcare Services (Dental) - Luxury 24/7 Dental Care in Lagos</title>
+    <meta name="description" content="Premium 24/7 Dental Care in Ejigbo, Lagos. Medicoview Healthcare Services (Dental) offers top-notch services including scaling, polishing, fillings, and extractions.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        amber: {
+                            500: '#d4af37', // Custom Gold-like
+                            600: '#b4942b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 border-b border-slate-100" id="navbar">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-2 group nav-link" data-target="home">
+                    <div class="w-9 h-9 bg-teal-600 rounded-lg flex items-center justify-center text-white shadow-lg shadow-teal-500/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-xl font-bold text-slate-900 leading-none group-hover:text-teal-600 transition-colors font-serif">Medicoview</span>
+                        <span class="block text-xs text-slate-500 uppercase tracking-wider font-semibold">Healthcare Services (Dental)</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors" data-target="home">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors" data-target="about">About</a>
+                    <a href="#services" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors" data-target="services">Services</a>
+                    <a href="#gallery" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors" data-target="gallery">Gallery</a>
+                    <a href="#reviews" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors" data-target="reviews">Reviews</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors" data-target="contact">Contact</a>
+                </nav>
+
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="tel:+2347043009049" class="flex items-center gap-2 text-slate-600 hover:text-teal-600 font-medium text-sm transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        +234 704 300 9049
+                    </a>
+                    <a href="#contact" class="nav-link btn-primary px-6 py-2.5 rounded-full text-sm shadow-lg" data-target="contact">
+                        Book Appointment
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-teal-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden flex-col pt-24 px-6 space-y-6 lg:hidden animate-fade-in h-screen overflow-y-auto">
+            <button id="nav-close-btn" class="absolute top-6 right-6 p-2 text-slate-500 hover:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <a href="#home" class="nav-link text-xl font-medium text-slate-800 border-b border-slate-100 pb-3 block hover:text-teal-600 transition-colors" data-target="home">Home</a>
+            <a href="#about" class="nav-link text-xl font-medium text-slate-800 border-b border-slate-100 pb-3 block hover:text-teal-600 transition-colors" data-target="about">About</a>
+            <a href="#services" class="nav-link text-xl font-medium text-slate-800 border-b border-slate-100 pb-3 block hover:text-teal-600 transition-colors" data-target="services">Services</a>
+            <a href="#gallery" class="nav-link text-xl font-medium text-slate-800 border-b border-slate-100 pb-3 block hover:text-teal-600 transition-colors" data-target="gallery">Gallery</a>
+            <a href="#reviews" class="nav-link text-xl font-medium text-slate-800 border-b border-slate-100 pb-3 block hover:text-teal-600 transition-colors" data-target="reviews">Reviews</a>
+            <a href="#contact" class="nav-link text-xl font-medium text-slate-800 border-b border-slate-100 pb-3 block hover:text-teal-600 transition-colors" data-target="contact">Contact</a>
+            
+            <div class="pt-6 flex flex-col gap-4">
+                <a href="#contact" class="nav-link btn-primary block w-full text-center px-6 py-4 rounded-xl text-lg shadow-lg" data-target="contact">Book Appointment</a>
+                <a href="tel:+2347043009049" class="btn-secondary block w-full text-center px-6 py-4 rounded-xl text-lg">Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-20">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="home" class="page-section active">
+            <!-- Hero -->
+            <div class="relative min-h-[90vh] flex items-center overflow-hidden">
+                <!-- Background Image -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop" alt="Luxury Dental Clinic" class="w-full h-full object-cover animate-scale-slow">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
+                </div>
+
+                <div class="container mx-auto px-4 lg:px-8 relative z-10 pt-10">
+                    <div class="max-w-2xl animate-on-scroll">
+                        <div class="inline-block px-4 py-1.5 bg-teal-50 border border-teal-100 rounded-full text-teal-700 text-xs font-bold tracking-wide mb-6 uppercase shadow-sm">
+                            Open 24 Hours • Ejigbo, Lagos
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
+                            Luxury <span class="text-teal-600">Dental Care</span><br>Day or Night.
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed max-w-lg font-medium">
+                            Medicoview Healthcare Services (Dental) offers premium dental treatments – from plaque removal and deep cleaning to cosmetic dentistry – available 24/7.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                            <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-center text-lg" data-target="contact">
+                                Book an Appointment
+                            </a>
+                            <a href="tel:+2347043009049" class="btn-secondary px-8 py-4 rounded-full text-center flex items-center justify-center gap-2 text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Call Now: +234 704 300 9049
+                            </a>
+                        </div>
+
+                        <div class="flex items-center gap-6 text-sm font-medium text-slate-500">
+                            <div class="flex items-center gap-1">
+                                <span class="text-amber-500 text-lg">★★★★★</span>
+                                <span class="text-slate-700">5.0 Google Rating</span>
+                            </div>
+                            <div class="w-1 h-1 bg-slate-400 rounded-full"></div>
+                            <div class="text-slate-700">Topnotch Care</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Preview -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Card 1 -->
+                        <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-slate-100 group animate-on-scroll delay-100">
+                            <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Plaque Removal</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Remove stubborn plaque and tartar build-up with gentle, professional cleaning for a brighter smile.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-slate-100 group animate-on-scroll delay-200">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Check-ups</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Routine examinations, X-rays, and preventive care to keep your teeth and gums in perfect shape.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-slate-100 group animate-on-scroll delay-300">
+                            <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-4 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Restorative</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Fillings, extractions, and other treatments to relieve pain and restore function quickly.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-slate-100 group animate-on-scroll delay-100">
+                            <div class="w-12 h-12 bg-amber-100 text-amber-500 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-500 group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Cosmetic</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Whitening, smile makeovers and enhancement options to give you more confidence.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12 animate-on-scroll">
+                        <a href="#services" class="nav-link inline-flex items-center gap-2 text-teal-600 font-bold hover:text-teal-700 hover:gap-3 transition-all" data-target="services">
+                            View All Services
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="py-20 bg-slate-50">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="flex flex-col lg:flex-row items-center gap-16">
+                        <div class="lg:w-1/2 animate-on-scroll">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">World-Class Dental Care<br>Right Here in Egbe</h2>
+                            <p class="text-slate-600 mb-8 leading-relaxed text-lg">
+                                We combine modern technology with a gentle touch. Our clinic is designed to be a relaxing sanctuary where your oral health is our top priority.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">✓</div>
+                                    <span class="text-slate-700"><strong>5.0 ★ Google Rating</strong> from happy patients</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">✓</div>
+                                    <span class="text-slate-700">Gentle, professional plaque removal and cleaning</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">✓</div>
+                                    <span class="text-slate-700"><strong>24/7 Availability</strong> for emergencies</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="mt-1 w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">✓</div>
+                                    <span class="text-slate-700">Fast and reliable – minimal waiting time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lg:w-1/2 relative animate-on-scroll delay-200">
+                            <div class="absolute -inset-4 bg-teal-100 rounded-2xl transform rotate-2"></div>
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop" alt="Dentist at work" class="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Short Reviews -->
+            <section class="py-20 bg-white border-y border-slate-100">
+                <div class="container mx-auto px-4 lg:px-8 text-center max-w-4xl">
+                    <h2 class="text-3xl font-bold mb-12 animate-on-scroll">What Our Patients Say</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-slate-50 p-6 rounded-xl text-left border border-slate-100 shadow-sm animate-on-scroll delay-100">
+                            <div class="text-amber-500 mb-3 text-sm">★★★★★</div>
+                            <p class="text-slate-700 italic mb-4">"Thank you for removing the plaque on my teeth. You did a great job."</p>
+                            <div class="font-bold text-slate-900 text-sm">— Chizoba C.</div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl text-left border border-slate-100 shadow-sm animate-on-scroll delay-200">
+                            <div class="text-amber-500 mb-3 text-sm">★★★★★</div>
+                            <p class="text-slate-700 italic mb-4">"Their services are topnotch. This is really the place to be for your dental care."</p>
+                            <div class="font-bold text-slate-900 text-sm">— Chibuzo G.</div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl text-left border border-slate-100 shadow-sm animate-on-scroll delay-300">
+                            <div class="text-amber-500 mb-3 text-sm">★★★★★</div>
+                            <p class="text-slate-700 italic mb-4">"It was so cool and fast – very reliable service."</p>
+                            <div class="font-bold text-slate-900 text-sm">— Drogba</div>
+                        </div>
+                    </div>
+                    <div class="mt-10 animate-on-scroll">
+                        <a href="#reviews" class="nav-link text-teal-600 font-bold underline decoration-2 underline-offset-4 hover:text-teal-700" data-target="reviews">Read More Reviews</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Teaser -->
+            <section class="py-20 bg-teal-900 text-white relative overflow-hidden">
+                <div class="absolute inset-0 bg-teal-800 opacity-50 pattern-grid-lg"></div>
+                <div class="container mx-auto px-4 lg:px-8 relative z-10 text-center animate-on-scroll">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 font-serif">Ready for a Brighter Smile?</h2>
+                    <p class="text-teal-100 text-lg mb-8 max-w-2xl mx-auto">Book your appointment today or call us for emergency care. We are open 24/7.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#contact" class="nav-link btn-secondary px-8 py-4 rounded-full text-teal-900 shadow-lg border-transparent" data-target="contact">Request an Appointment</a>
+                        <a href="tel:+2347043009049" class="btn-white-outline px-8 py-4 rounded-full">Call +234 704 300 9049</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ================= ABOUT PAGE ================= -->
+        <section id="about" class="page-section">
+            <div class="bg-slate-900 text-white py-20 relative overflow-hidden">
+                <div class="absolute inset-0 bg-black/40 z-0"></div>
+                <div class="container mx-auto px-4 lg:px-8 text-center relative z-10 animate-on-scroll">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 font-serif">About Us</h1>
+                    <p class="text-slate-300 text-lg max-w-2xl mx-auto">Providing gentle, affordable, and premium-quality dental care in Ejigbo.</p>
+                </div>
+            </div>
+            
+            <div class="container mx-auto px-4 lg:px-8 py-20">
+                <div class="flex flex-col md:flex-row gap-12 items-center mb-20">
+                    <div class="md:w-1/2 animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b63?q=80&w=2069&auto=format&fit=crop" alt="Modern Clinic Interior" class="rounded-2xl shadow-xl hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="md:w-1/2 animate-on-scroll delay-200">
+                        <h2 class="text-3xl font-bold mb-6 text-slate-900">Our Story</h2>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Medicoview Healthcare Services (Dental) is a modern dental centre located in Ejigbo, Lagos. We were founded on the belief that premium dental care should be accessible, comfortable, and available whenever you need it.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Unlike traditional clinics with restricted hours, we understand that dental pain doesn't adhere to a schedule. That is why we stay open 24 hours a day, ensuring you always have a place to turn to for relief and professional care.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-20">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center animate-on-scroll delay-100 hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">🏥</div>
+                        <h3 class="text-xl font-bold mb-3">Modern Facility</h3>
+                        <p class="text-slate-600 text-sm">Equipped with the latest dental technology for precise diagnosis and treatment.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center animate-on-scroll delay-200 hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">✨</div>
+                        <h3 class="text-xl font-bold mb-3">Sterile & Safe</h3>
+                        <p class="text-slate-600 text-sm">We adhere to strict sterilization protocols to ensure a safe environment for every patient.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center animate-on-scroll delay-300 hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">🤝</div>
+                        <h3 class="text-xl font-bold mb-3">Patient First</h3>
+                        <p class="text-slate-600 text-sm">We listen to your concerns and provide honest recommendations tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES PAGE ================= -->
+        <section id="services" class="page-section">
+            <div class="bg-teal-50 py-20">
+                <div class="container mx-auto px-4 lg:px-8 text-center animate-on-scroll">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif text-slate-900">Our Services</h1>
+                    <p class="text-slate-600 text-lg max-w-2xl mx-auto">Comprehensive dental solutions for the whole family.</p>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-8 py-16">
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <!-- Service Item -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all animate-on-scroll">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Plaque Removal & Scaling</h3>
+                            <a href="#contact" class="nav-link btn-primary px-6 py-2 rounded-lg text-sm" data-target="contact">Book Now</a>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Professional cleaning to remove tartar (calculus) and plaque that regular brushing cannot reach. Essential for preventing gum disease and bad breath.
+                        </p>
+                        <div class="text-sm text-slate-500 font-medium">Recommended: Every 6 months • Duration: 30-45 mins</div>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all animate-on-scroll delay-100">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Tooth Fillings</h3>
+                            <a href="#contact" class="nav-link btn-primary px-6 py-2 rounded-lg text-sm" data-target="contact">Book Now</a>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Restore damaged or decayed teeth with natural-looking composite materials. We remove the decay and fill the space to restore the tooth's shape and function.
+                        </p>
+                    </div>
+
+                     <!-- Service Item -->
+                     <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all animate-on-scroll delay-200">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Teeth Whitening</h3>
+                            <a href="#contact" class="nav-link btn-primary px-6 py-2 rounded-lg text-sm" data-target="contact">Book Now</a>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Safe and effective whitening treatments to brighten stained or discolored teeth. Get a dazzling smile in just one visit.
+                        </p>
+                        <div class="text-sm text-slate-500 font-medium">Cosmetic Treatment • Immediate Results</div>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-red-100 hover:shadow-lg transition-all animate-on-scroll delay-300 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-bl-lg">EMERGENCY</div>
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Emergency Dental Care (24/7)</h3>
+                            <a href="tel:+2347043009049" class="bg-red-600 text-white px-6 py-2 rounded-lg text-sm font-bold hover:bg-red-700 transition-colors text-center shadow-md">Call Emergency</a>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Immediate relief for severe toothaches, broken teeth, or injuries. We are open around the clock to handle your dental emergencies.
+                        </p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg transition-all animate-on-scroll delay-100">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">General Check-ups</h3>
+                            <a href="#contact" class="nav-link btn-primary px-6 py-2 rounded-lg text-sm" data-target="contact">Book Now</a>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Comprehensive oral examinations including cancer screening and gum health checks. Prevention is better than cure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY PAGE ================= -->
+        <section id="gallery" class="page-section">
+            <div class="bg-slate-900 py-20 text-white">
+                <div class="container mx-auto px-4 lg:px-8 text-center animate-on-scroll">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Our Gallery</h1>
+                    <p class="text-slate-400 text-lg">A glimpse into our clinic and happy smiles.</p>
+                </div>
+            </div>
+            <div class="container mx-auto px-4 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2070&auto=format&fit=crop" alt="Clinic Interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white font-medium">Modern Equipment</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 animate-on-scroll delay-100">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop" alt="Dental Tools" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white font-medium">Sterilized Tools</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 animate-on-scroll delay-200">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop" alt="Smiling Patient" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white font-medium">Happy Patients</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974&auto=format&fit=crop" alt="Dentist Working" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white font-medium">Professional Care</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 animate-on-scroll delay-100">
+                        <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=2070&auto=format&fit=crop" alt="Clean Teeth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white font-medium">Brighter Smiles</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl aspect-square bg-slate-100 animate-on-scroll delay-200">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" alt="Reception" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                            <p class="text-white font-medium">Welcoming Environment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= REVIEWS PAGE ================= -->
+        <section id="reviews" class="page-section">
+            <div class="bg-teal-50 py-20">
+                <div class="container mx-auto px-4 lg:px-8 text-center animate-on-scroll">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif text-slate-900">Patient Reviews</h1>
+                    <div class="flex items-center justify-center gap-2 mb-4">
+                        <span class="text-amber-500 text-2xl">★★★★★</span>
+                        <span class="text-slate-700 font-semibold text-lg">5.0 Average Google Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-8 py-16 max-w-3xl">
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 animate-on-scroll">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">C</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Chizoba C.</h4>
+                                <div class="text-amber-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic">"Thank you for removing the plaque on my teeth. You did a great job. My smile feels brand new."</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 animate-on-scroll delay-100">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">C</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Chibuzo G.</h4>
+                                <div class="text-amber-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic">"Their services are topnotch. This is really the place to be for your dental care. Highly recommended."</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 animate-on-scroll delay-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">D</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Drogba</h4>
+                                <div class="text-amber-500 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic">"It was so cool and fast – very reliable. I didn't have to wait long."</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center animate-on-scroll">
+                    <a href="#contact" class="nav-link btn-primary inline-block px-8 py-4 rounded-full text-lg shadow-lg" data-target="contact">
+                        Experience It Yourself
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section id="contact" class="page-section">
+            <div class="bg-slate-900 text-white py-20">
+                <div class="container mx-auto px-4 lg:px-8 text-center animate-on-scroll">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 font-serif">Contact Us</h1>
+                    <p class="text-slate-400 text-lg">We are here for you 24 hours a day, 7 days a week.</p>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 lg:px-8 py-16">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Form -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 animate-on-scroll">
+                        <h2 class="text-2xl font-bold mb-6 text-slate-900">Book an Appointment</h2>
+                        <form id="booking-form" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-colors" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                                    <input type="tel" required class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-colors" placeholder="+234...">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Service Needed</label>
+                                <select class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-colors">
+                                    <option>General Check-up</option>
+                                    <option>Plaque Removal / Cleaning</option>
+                                    <option>Tooth Pain / Emergency</option>
+                                    <option>Teeth Whitening</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Preferred Date</label>
+                                    <input type="date" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Time of Day</label>
+                                    <select class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-colors">
+                                        <option>Morning</option>
+                                        <option>Afternoon</option>
+                                        <option>Evening</option>
+                                        <option>Late Night (Emergency)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Additional Notes</label>
+                                <textarea rows="3" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none transition-colors" placeholder="Any specific concerns?"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full py-4 rounded-lg shadow-lg">Confirm Appointment Request</button>
+                            <p class="text-xs text-center text-slate-500 mt-2">We will contact you shortly to confirm your slot.</p>
+                        </form>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="space-y-8 animate-on-scroll delay-200">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-slate-900">Contact Information</h3>
+                            <div class="space-y-4 text-slate-600">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-6 h-6 text-teal-600 mt-1">📍</div>
+                                    <p>Shop 23, Plaza, 79/81 Egbe Rd, Ejigbo, Egbe, Lagos 102213, Nigeria</p>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 text-teal-600">📞</div>
+                                    <a href="tel:+2347043009049" class="hover:text-teal-600 font-medium">+234 704 300 9049</a>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 text-teal-600">💬</div>
+                                    <a href="https://wa.me/2347043009049" class="hover:text-teal-600 font-medium">Chat on WhatsApp</a>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 text-teal-600">⏰</div>
+                                    <p>Open 24 Hours / 7 Days</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-50 p-6 rounded-xl border border-red-100 shadow-sm">
+                            <h3 class="text-red-700 font-bold text-lg mb-2 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                                Emergency?
+                            </h3>
+                            <p class="text-red-600 mb-4">Don't wait in pain. Call our 24/7 emergency line immediately.</p>
+                            <a href="tel:+2347043009049" class="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-colors shadow-md">Call Now</a>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="w-full h-64 bg-slate-200 rounded-xl overflow-hidden relative shadow-md">
+                             <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.308678!3d6.527638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8f0000000001%3A0x0!2zNsKwMzEnMzkuNSJOIDPCsDE4JzMxLjIiRQ!5e0!3m2!1sen!2sng!4v1600000000000!5m2!1sen!2sng" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-white text-xl font-bold mb-4">Medicoview Healthcare Services (Dental)</h3>
+                    <p class="text-slate-400 max-w-sm mb-4">Premium, 24/7 dental care in Ejigbo, Lagos. Restoring smiles with gentle, professional treatment.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-teal-400 nav-link transition-colors" data-target="home">Home</a></li>
+                        <li><a href="#about" class="hover:text-teal-400 nav-link transition-colors" data-target="about">About Us</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 nav-link transition-colors" data-target="services">Services</a></li>
+                        <li><a href="#contact" class="hover:text-teal-400 nav-link transition-colors" data-target="contact">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Shop 23, Plaza, 79/81 Egbe Rd, Ejigbo, Lagos</li>
+                        <li><a href="tel:+2347043009049" class="hover:text-teal-400 transition-colors">+234 704 300 9049</a></li>
+                        <li>Open 24 Hours</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500">
+                &copy; 2024 Medicoview Healthcare Services (Dental). All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Mobile CTA -->
+    <div class="lg:hidden fixed bottom-6 right-6 z-40 flex flex-col gap-3 animate-fade-in">
+        <a href="https://wa.me/2347043009049" class="w-14 h-14 bg-green-500 rounded-full shadow-lg flex items-center justify-center text-white hover:bg-green-600 transition-transform hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a href="tel:+2347043009049" class="w-14 h-14 bg-teal-600 rounded-full shadow-lg flex items-center justify-center text-white hover:bg-teal-700 transition-transform hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>

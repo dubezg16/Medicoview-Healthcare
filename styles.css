@@ -1,0 +1,101 @@
+/* Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Gold Gradient Text */
+.gold-accent {
+    background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Page Section Transitions */
+.page-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-section.active {
+    display: block;
+    opacity: 1;
+    animation: fadeInPage 0.6s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* Custom Button Styles ensuring visibility */
+.btn-primary {
+    background-color: #0d9488 !important; /* teal-600 */
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0f766e !important; /* teal-700 */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.4);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #0f766e !important; /* teal-700 */
+    border: 2px solid #0d9488 !important; /* teal-600 */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #f0fdfa; /* teal-50 */
+    transform: translateY(-2px);
+}
+
+.btn-white-outline {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-white-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff !important;
+}
+
+/* Pattern Background */
+.pattern-grid-lg {
+    background-image: linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+    background-size: 40px 40px;
+}
